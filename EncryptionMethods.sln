@@ -3,9 +3,33 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Polyalphabetic", "Polyalphabetic", "{72A5936A-02C3-4A04-BB78-40EA1DDF1FFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polyalphabetic.Library", "Polyalphabetic.Library\Polyalphabetic.Library.csproj", "{FE26EA7C-01B0-436B-8709-2C6766176751}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polyalphabetic.Tests", "Polyalphabetic.Tests\Polyalphabetic.Tests.csproj", "{19C495CA-A6DA-4998-BB8D-5FA5F0CCD361}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE26EA7C-01B0-436B-8709-2C6766176751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE26EA7C-01B0-436B-8709-2C6766176751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE26EA7C-01B0-436B-8709-2C6766176751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE26EA7C-01B0-436B-8709-2C6766176751}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19C495CA-A6DA-4998-BB8D-5FA5F0CCD361}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19C495CA-A6DA-4998-BB8D-5FA5F0CCD361}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19C495CA-A6DA-4998-BB8D-5FA5F0CCD361}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19C495CA-A6DA-4998-BB8D-5FA5F0CCD361}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FE26EA7C-01B0-436B-8709-2C6766176751} = {72A5936A-02C3-4A04-BB78-40EA1DDF1FFF}
+		{19C495CA-A6DA-4998-BB8D-5FA5F0CCD361} = {72A5936A-02C3-4A04-BB78-40EA1DDF1FFF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DCBD3BB3-ED3F-4C4D-A265-2B0FC7E6E6E2}
