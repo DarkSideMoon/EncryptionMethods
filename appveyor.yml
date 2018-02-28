@@ -1,0 +1,16 @@
+image: Visual Studio 2017
+
+# version of net core
+environment:
+    matrix:
+        - CLI_VERSION: 2.0.0
+
+build_script:
+  # dotnet info
+  - ps: dotnet --info
+  # Run dotnet new 
+  - ps: dotnet restore EncryptionMethods.sln
+  - ps: dotnet build EncryptionMethods.sln
+  #- ps: dotnet test EncryptionMethods.sln
+
+version: 0.0.1.{build}

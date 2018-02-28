@@ -1,0 +1,13 @@
+language: csharp
+dist: trusty
+sudo: required
+solution: EncryptionMethods.sln
+mono: none
+dotnet: 2.0.0
+
+install:
+  - dotnet restore EncryptionMethods.sln
+
+script:
+- dotnet build EncryptionMethods.sln
+#- dotnet test ./src/RocketNET/RocketNET.Test/RocketNET.Test.csproj
