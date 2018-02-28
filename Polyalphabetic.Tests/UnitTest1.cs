@@ -10,5 +10,11 @@ namespace Polyalphabetic.Tests
         {
             Assert.IsTrue(5 == 5);
         }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+            Assert.IsTrue(10 == 10);
+        }
     }
 }
