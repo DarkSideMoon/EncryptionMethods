@@ -9,5 +9,6 @@ install:
   - dotnet restore EncryptionMethods.sln
 
 script:
+- dotnet --info
 - dotnet build EncryptionMethods.sln
 - dotnet test ./Polyalphabetic.Tests/Polyalphabetic.Tests.csproj
