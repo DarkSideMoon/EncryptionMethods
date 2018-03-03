@@ -40,14 +40,14 @@ namespace Polyalphabetic.Library
 
                 if (i == 0)
                 {
-                    CaesarShiftOne(ref pushedRow);
+                    pushedRow = ShiftOne(pushedRow);
                     tbl[i] = pushedRow;
                     continue;
                 }
 
                 for (var j = 0; j < i + 1; j++)
                 {
-                    CaesarShiftOne(ref pushedRow);
+                    pushedRow = ShiftOne(pushedRow);
                     tbl[i] = pushedRow;
                 }
             }
@@ -55,46 +55,46 @@ namespace Polyalphabetic.Library
             return tbl;
         }
 
-        private static void CaesarShiftOne(ref byte[] orig)
+        private byte[] ShiftOne(byte[] orig)
         {
-            var bytes = new byte[orig.Length];
+            byte[] bytes = new byte[orig.Length];
             Buffer.BlockCopy(orig, 0, bytes, 0, orig.Length);
 
             var first = bytes[0];
-
             for (var i = 0; i < bytes.Length - 1; i++)
                 orig[i] = bytes[i + 1];
 
             orig[orig.Length - 1] = first;
+            return orig;
         }
 
         public override string ToString()
         {
-            var tbl = Create();
-            var finalStr = new StringBuilder();
+            byte[][] tbl = Create();
+            StringBuilder stringBuilder = new StringBuilder();
 
-            finalStr.Append("plain\t");
+            stringBuilder.Append("plain\t");
 
             foreach (char c in RawStringRow)
-                finalStr.Append(c + " ");
+                stringBuilder.Append(c + " ");
 
-            finalStr.AppendLine();
+            stringBuilder.AppendLine();
 
-            var curLen = finalStr.Length;
+            var curLen = stringBuilder.Length;
             for (var i = 0; i < curLen; i++)
-                finalStr.Append("_");
+                stringBuilder.Append("_");
 
-            finalStr.AppendLine();
+            stringBuilder.AppendLine();
 
             for (var i = 0; i < tbl.Length; i++)
             {
-                finalStr.Append(i + "\t");
+                stringBuilder.Append(i + "\t");
                 for (var j = 0; j < tbl[i].Length; j++)
-                    finalStr.Append((char)(tbl[i][j]) + " ");
-                finalStr.AppendLine();
+                    stringBuilder.Append((char)(tbl[i][j]) + " ");
+                stringBuilder.AppendLine();
             }
 
-            return finalStr.ToString();
+            return stringBuilder.ToString();
         }
     }
 }
