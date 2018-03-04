@@ -71,7 +71,9 @@ namespace RSA.Library
             this.P = p;
             this.Q = q;
 
-            Tuple<BigInteger, BigInteger> keys = this.GeneratePrivateAndPublicKeys();
+            //Tuple<BigInteger, BigInteger> keys = this.GeneratePrivateAndPublicKeys();
+            //_privateKey = keys.Item1;
+            //_publicKey = keys.Item2;
         }
 
         /// <summary>
@@ -80,13 +82,13 @@ namespace RSA.Library
         /// <returns>Item1: Private key Item2: Public key</returns>
         public Tuple<BigInteger, BigInteger> GeneratePrivateAndPublicKeys()
         {
-            // Вычисляем модуль n
+            // Compute the module n
             n = BigInteger.Multiply(this.Q, this.P);
 
             // Convert to base 10 (decimal):
             string base101 = n.ToString();
 
-            // Считаем функцию Эйлера: φ=(p-1)×(q-1)
+            // Calculate the Euler function: φ=(p-1)×(q-1)
             BigInteger fi = BigInteger.Subtract(this.P, BigInteger.One) * BigInteger.Subtract(this.Q, BigInteger.One);
 
             this.Function = fi;
@@ -94,6 +96,7 @@ namespace RSA.Library
             // Convert to base 10 (decimal):
             string base102 = fi.ToString();
 
+            // Generate public key using function FI
             _publicKey = Generate(fi); //new BigInteger(151); //Generate(fi);
 
             // Very long working
@@ -107,19 +110,16 @@ namespace RSA.Library
                 _publicKey = Generate(fi);
             }
 
-            //Random e number 1 < e < fi
-            // Но может быть больше fi - но в таком случае будут повторение
+            // Random e number 1 < e < fi
+            // But there may be more fi - but in that case there will be a repetition
             //int e = new Random().Next(1, Convert.ToInt32(fi.ToString()));
             int e = new Random().Next(1, int.Parse(_publicKey.ToString()));
-            this.EValue = e;//79;
+            this.EValue = e; // 79
 
-            _publicKey = GeneratePrivateKey(fi, this.EValue); // 79
+            _publicKey = GeneratePrivateKey(fi, EValue); // 79
 
             // Convert to base 10 (decimal):
             string base103 = _publicKey.ToString();
-
-            // Convert to base 10 (decimal):
-            string base10 = _publicKey.ToString();
 
             return new Tuple<BigInteger, BigInteger>(_publicKey, _publicKey);
         }
@@ -156,26 +156,23 @@ namespace RSA.Library
 
         public string Encrypt(string text)
         {
-            string result = string.Empty;
-
-            //List<int> codingText = new List<int>();
-            //codingText = CodingValue(text);
+            StringBuilder stringBuilder = new StringBuilder();
             string[] numbers = text.Split(' ');
 
-            for (int i = 0; i < numbers.Length; i++)
+            foreach (var t in numbers)
             {
-                BigInteger value = new BigInteger(int.Parse(numbers[i]));
+                BigInteger value = new BigInteger(int.Parse(t));
                 BigInteger res = BigInteger.ModPow(value, EValue, n);
 
-                result += res.ToString();
-                result += " ";
+                stringBuilder.Append(res);
+                stringBuilder.Append(" ");
             }
-            return result;
+            return stringBuilder.ToString();
         }
 
         public string Decrypt(string stringNumber)
         {
-            string result = string.Empty;
+            StringBuilder stringBuilder = new StringBuilder();
             string[] numbers = stringNumber.Split(' ');
 
             foreach (string stringNum in numbers)
@@ -185,12 +182,12 @@ namespace RSA.Library
                     BigInteger value = new BigInteger(int.Parse(stringNum));
                     BigInteger res = BigInteger.ModPow(value, _privateKey, n);
 
-                    result += res.ToString();
-                    result += " ";
+                    stringBuilder.Append(res);
+                    stringBuilder.Append(" ");
                 }
             }
 
-            return result;
+            return stringBuilder.ToString();
         }
     }
 }
