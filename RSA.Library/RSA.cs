@@ -71,9 +71,7 @@ namespace RSA.Library
             this.P = p;
             this.Q = q;
 
-            //Tuple<BigInteger, BigInteger> keys = this.GeneratePrivateAndPublicKeys();
-            //_privateKey = keys.Item1;
-            //_publicKey = keys.Item2;
+            this.GeneratePrivateAndPublicKeys();
         }
 
         /// <summary>
@@ -116,12 +114,12 @@ namespace RSA.Library
             int e = new Random().Next(1, int.Parse(_publicKey.ToString()));
             this.EValue = e; // 79
 
-            _publicKey = GeneratePrivateKey(fi, EValue); // 79
+            _privateKey = GeneratePrivateKey(fi, EValue); // 79
 
             // Convert to base 10 (decimal):
-            string base103 = _publicKey.ToString();
+            string base103 = _privateKey.ToString();
 
-            return new Tuple<BigInteger, BigInteger>(_publicKey, _publicKey);
+            return new Tuple<BigInteger, BigInteger>(_privateKey, _publicKey);
         }
 
         public static BigInteger Generate(BigInteger N)
