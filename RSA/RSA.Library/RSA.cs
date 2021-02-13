@@ -97,10 +97,9 @@ namespace RSA.Library
             // Generate public key using function FI
             _publicKey = Generate(fi); //new BigInteger(151); //Generate(fi);
 
-            // Very long working
-            //while (!BigIntegerExtension.IsProbablyPrime(publicKey, 10))
+            //while (!BigIntegerExtension.IsProbablyPrime(_publicKey, 10))
             //{
-            //    publicKey = Generate(fi);
+            //    _publicKey = Generate(fi);
             //}
 
             while (!_primeNumbers.Contains(int.Parse(_publicKey.ToString())))

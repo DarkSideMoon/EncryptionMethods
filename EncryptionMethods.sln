@@ -1,25 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2027
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Polyalphabetic", "Polyalphabetic", "{72A5936A-02C3-4A04-BB78-40EA1DDF1FFF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polyalphabetic.Library", "Polyalphabetic.Library\Polyalphabetic.Library.csproj", "{FE26EA7C-01B0-436B-8709-2C6766176751}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polyalphabetic.Library", "Polyalphabetic\Polyalphabetic.Library\Polyalphabetic.Library.csproj", "{FE26EA7C-01B0-436B-8709-2C6766176751}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polyalphabetic.Tests", "Polyalphabetic.Tests\Polyalphabetic.Tests.csproj", "{19C495CA-A6DA-4998-BB8D-5FA5F0CCD361}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polyalphabetic.Tests", "Polyalphabetic\Polyalphabetic.Tests\Polyalphabetic.Tests.csproj", "{19C495CA-A6DA-4998-BB8D-5FA5F0CCD361}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RSA", "RSA", "{C06E7679-ECB6-48BE-9350-B70861BB646F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RSA.Library", "RSA.Library\RSA.Library.csproj", "{AD719FAB-0DF1-4AB0-B010-4D98DAABB0F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RSA.Library", "RSA\RSA.Library\RSA.Library.csproj", "{AD719FAB-0DF1-4AB0-B010-4D98DAABB0F0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RSA.Tests", "RSA.Test\RSA.Tests.csproj", "{581BBC5F-44EB-4BEB-8028-76B3CD675E81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RSA.Tests", "RSA\RSA.Test\RSA.Tests.csproj", "{581BBC5F-44EB-4BEB-8028-76B3CD675E81}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DSA", "DSA", "{E40772EC-8311-405C-9EFC-598F56E094A3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSA.Library", "DSA.Library\DSA.Library.csproj", "{8A33ECE5-D7AE-45FA-84D2-84DB553FB860}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSA.Library", "DSA\DSA.Library\DSA.Library.csproj", "{8A33ECE5-D7AE-45FA-84D2-84DB553FB860}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Tests", "DSA.Tests\DSA.Tests.csproj", "{982FA821-D1B8-4FA2-94C0-95F259CE7350}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA.Tests", "DSA\DSA.Tests\DSA.Tests.csproj", "{982FA821-D1B8-4FA2-94C0-95F259CE7350}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{F0A3DB56-95BA-4A13-904D-55D18AD94374}"
 EndProject
@@ -27,9 +27,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Externals", "External.Libra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MD5", "MD5", "{4CC6DF9A-2ED3-4E7E-A2F6-1641922AE83F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD5.Library", "MD5.Library\MD5.Library.csproj", "{BF143DE9-A500-4526-A0EE-88CD88DDAA77}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD5.Library", "MD5\MD5.Library\MD5.Library.csproj", "{BF143DE9-A500-4526-A0EE-88CD88DDAA77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD5.Tests", "MD5.Tests\MD5.Tests.csproj", "{A447260F-3021-4372-9DBC-F33D16AD0B11}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MD5.Tests", "MD5\MD5.Tests\MD5.Tests.csproj", "{A447260F-3021-4372-9DBC-F33D16AD0B11}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
