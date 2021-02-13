@@ -6,6 +6,6 @@ build_script:
   # Run dotnet new 
   - ps: dotnet restore EncryptionMethods.sln
   - ps: dotnet build EncryptionMethods.sln
-  - ps: dotnet test ./Polyalphabetic.Tests/Polyalphabetic.Tests.csproj
+  - ps: dotnet test ./Polyalphabetic/Polyalphabetic.Tests/Polyalphabetic.Tests.csproj
 
 version: 0.0.1.{build}
