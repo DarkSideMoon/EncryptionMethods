@@ -11,4 +11,6 @@ install:
 script:
 - dotnet --info
 - dotnet build EncryptionMethods.sln
-- dotnet test ./Polyalphabetic.Tests/Polyalphabetic.Tests.csproj
+- dotnet test ./Polyalphabetic/Polyalphabetic.Tests/Polyalphabetic.Tests.csproj
+- dotnet test ./DSA/DSA.Tests/DSA.Tests.csproj
+- dotnet test ./MD5/MD5.Tests/MD5.Tests.csproj

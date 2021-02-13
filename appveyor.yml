@@ -7,5 +7,7 @@ build_script:
   - ps: dotnet restore EncryptionMethods.sln
   - ps: dotnet build EncryptionMethods.sln
   - ps: dotnet test ./Polyalphabetic/Polyalphabetic.Tests/Polyalphabetic.Tests.csproj
+  - ps: dotnet test ./DSA/DSA.Tests/DSA.Tests.csproj
+  - ps: dotnet test ./MD5/MD5.Tests/MD5.Tests.csproj
 
 version: 0.0.1.{build}
