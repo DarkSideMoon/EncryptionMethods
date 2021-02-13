@@ -6,7 +6,7 @@ namespace Externals
     {
         public static string GetExternalFolderPath()
         {
-            return Directory.GetCurrentDirectory() + @"\..\..\..\..\External\";
+            return Directory.GetCurrentDirectory() + @"\..\..\..\..\..\External\";
         }
     }
 }

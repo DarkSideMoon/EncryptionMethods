@@ -1,9 +1,9 @@
 language: csharp
-dist: trusty
+dist: xenial
 sudo: required
 solution: EncryptionMethods.sln
 mono: none
-dotnet: 2.1.4
+dotnet: 5.0
 
 install:
   - dotnet restore EncryptionMethods.sln

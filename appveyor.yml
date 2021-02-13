@@ -1,9 +1,4 @@
-image: Visual Studio 2017
-
-# version of net core
-environment:
-    matrix:
-        - CLI_VERSION: 2.0.0
+image: Visual Studio 2019
 
 build_script:
   # dotnet info
